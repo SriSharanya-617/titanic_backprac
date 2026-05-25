@@ -55,14 +55,6 @@ img {
     color:white;
 }
 
-.metric-card {
-    background:#1e293b;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.3);
-}
-
 </style>
 """, unsafe_allow_html=True)
 
@@ -83,13 +75,16 @@ Artificial Neural Network Based Passenger Survival Analysis
 """, unsafe_allow_html=True)
 
 # ------------------------------------------------
-# HERO IMAGE
+# SMALL HERO IMAGE
 # ------------------------------------------------
 
-st.image(
-    "https://images.unsplash.com/photo-1518546305927-5a555bb7020d",
-    use_container_width=True
-)
+col1, col2, col3 = st.columns([1.5,2,1.5])
+
+with col2:
+    st.image(
+        "https://images.unsplash.com/photo-1518546305927-5a555bb7020d",
+        width=600
+    )
 
 # ------------------------------------------------
 # TOP SECTION
@@ -162,8 +157,6 @@ x3 = fare / 600
 # INITIAL WEIGHTS
 # ------------------------------------------------
 
-# Input -> Hidden
-
 w_x1_h1 = 0.11
 w_x2_h1 = 0.14
 w_x3_h1 = 0.17
@@ -172,17 +165,11 @@ w_x1_h2 = 0.21
 w_x2_h2 = 0.24
 w_x3_h2 = 0.27
 
-# Hidden Biases
-
 b_h1 = 0.1
 b_h2 = 0.1
 
-# Hidden -> Output
-
 w_h1_o1 = 0.31
 w_h2_o1 = 0.34
-
-# Output Bias
 
 b_o1 = 0.1
 
